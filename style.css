@@ -1,0 +1,75 @@
+
+.form-inline{position:absolute; right: 2em;}
+.topNote {margin-bottom: 3em;}
+.flex-column {
+padding: 0.7em;
+}
+textarea {
+  resize: none;
+  border-radius: 7px;
+  outline: none;
+}
+
+.topNote {
+
+}
+.init {
+  display:block;
+  width: 30em;
+  height: 4em;
+}
+
+#close {
+  display: none;
+  border: none;
+  background-color: white;
+  position:absolute;
+  bottom:10px;
+  right:10px;}
+.note {
+  position: relative;
+  top: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  filter: drop-shadow(0 0 2px #aaaaaa);
+}
+
+#buttonCollection{
+  border: none;
+  background-color: white;
+  position:absolute;
+  bottom:10px;
+  right:10px;
+}
+.formCollection{
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+}
+.txtareaCollection {
+  width: 15em;
+  height: 10em;
+}
+
+  .user {
+  display: none;
+  width: 20em;
+  height: 10em;
+  position: absolute;
+  top: 15%;
+  right: 10%;
+}
+
+.register {
+  display: none;
+  width: 30em;
+  height: 20em;
+  position: absolute;
+  top: 20%;
+  left: 30%;
+}
+
+.blur {
+  filter: blur(2px);
+}
