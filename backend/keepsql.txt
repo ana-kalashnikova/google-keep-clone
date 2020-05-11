@@ -3,6 +3,7 @@ CRREATE DATABASE keep;
 CREATE TABLE keep.users (
 	user_id int(20) AUTO_INCREMENT PRIMARY KEY,
 	user_name varchar(35),
+	email varchar(40),
 	password varchar(35)
     );
 
