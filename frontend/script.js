@@ -1,8 +1,7 @@
 $(document).ready(function(){
+
   $('.note').focusin(function(){
 //disable the top form before the user signs in !????
-
-    $('#close').toggle();
     $('.init').css({
     'height':'+=3em',
   });
@@ -11,20 +10,38 @@ $(document).ready(function(){
 $('.note').focusout(function(){
   $('.init').css({ // shrink the top form
   'height':'-=3em'
-}).val(''); //clear the form
+});
+//How to keep the form after submitting???????????
+
   });
 
 
 $('.signin').click(function(e){
   $('.user').toggle();
-   // $('.blury').addClass('blur');
   e.preventDefault();
 });
 
 $('.signup').click(function(e){
   $('.register').toggle();
-   // $('.blury').addClass('blur');
   e.preventDefault();
 });
 
-})
+$('.formCollection').focusin(function(){
+  $('.txtareaCollection').css({
+    'position':'fixed',
+    'top':'20%',
+    'left':'40%',
+    'width':'20em',
+    'height':'15em',
+    'z-index':'3'
+  });
+
+  // $('.buttonCollection').css({
+  //   'position':'fixed',
+  //   'bottom':'22em',
+  //   'right':'39em',
+  //   'z-index':'101'
+  // });
+
+});
+});

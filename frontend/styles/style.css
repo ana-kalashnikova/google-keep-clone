@@ -1,4 +1,4 @@
-
+*{font-family: 'Roboto', sans-serif;}
 .form-inline{position:absolute; right: 2em;}
 .topNote {margin-bottom: 3em;}
 .flex-column {
@@ -10,22 +10,21 @@ textarea {
   outline: none;
 }
 
-.topNote {
-
-}
 .init {
+  position: relative;
   display:block;
   width: 30em;
   height: 4em;
 }
 
-#close {
-  display: none;
+.close {
   border: none;
   background-color: white;
   position:absolute;
   bottom:10px;
-  right:10px;}
+  right:10px;
+  font-size: 14px;
+}
 .note {
   position: relative;
   top: 0.5em;
@@ -34,25 +33,24 @@ textarea {
   filter: drop-shadow(0 0 2px #aaaaaa);
 }
 
-#buttonCollection{
+/* .buttonCollection{
   border: none;
   background-color: white;
   position:absolute;
   bottom:10px;
   right:10px;
-}
+} */
 .formCollection{
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 10px;
 }
 .txtareaCollection {
   width: 15em;
   height: 10em;
 }
 
-  .user {
+.user {
   display: none;
   width: 20em;
   height: 10em;
@@ -68,8 +66,5 @@ textarea {
   position: absolute;
   top: 20%;
   left: 30%;
-}
-
-.blur {
-  filter: blur(2px);
+  z-index: 2;
 }
