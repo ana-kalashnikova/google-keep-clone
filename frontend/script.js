@@ -10,20 +10,27 @@ $(document).ready(function(){
 $('.note').focusout(function(){
   $('.init').css({ // shrink the top form
   'height':'-=3em'
-});
-//How to keep the form after submitting???????????
-
+  });
+// submit when click outside the form?????
+  // $('.close').submit(); //form class
+  // $('.init').val('');
   });
 
 
 $('.signin').click(function(e){
   $('.user').toggle();
   e.preventDefault();
+
 });
 
 $('.signup').click(function(e){
   $('.register').toggle();
   e.preventDefault();
+  $('.blur').css('display','flex');
+});
+$('.register').submit(function(i){
+  i.preventDefault();
+  $('.blur').hide();
 });
 
 $('.formCollection').focusin(function(){
@@ -35,13 +42,6 @@ $('.formCollection').focusin(function(){
     'height':'15em',
     'z-index':'3'
   });
-
-  // $('.buttonCollection').css({
-  //   'position':'fixed',
-  //   'bottom':'22em',
-  //   'right':'39em',
-  //   'z-index':'101'
-  // });
 
 });
 });

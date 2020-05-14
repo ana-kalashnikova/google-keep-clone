@@ -24,7 +24,6 @@
     </form>
   </nav>
 
-<div>
 <?php
   //sign in existing use
   if ($_SERVER['REQUEST_METHOD']=='POST'){
@@ -56,7 +55,6 @@
   <input type="submit" class="btn btn-primary" value="Sign In">
   <input type="submit" class="btn btn-primary signup" value="Sign Up">
 </form>
-</div>
 
 <?php
 if ($_SERVER['REQUEST_METHOD']=='POST'){
@@ -72,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST'){
 
 }
  ?>
-<div class="blur">
+ <div class="blur">
   <form class="register" action="test1.php" method="post">
   <div class="form-group">
     <label for="UserName">User name</label>
