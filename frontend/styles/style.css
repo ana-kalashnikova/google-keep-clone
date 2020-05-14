@@ -1,7 +1,13 @@
-*{font-family: 'Roboto', sans-serif;}
+*{
+  font-family: 'Roboto', sans-serif;
+}
 /* signin button */
-.form-inline{position:absolute; right: 2em;}
-.topNote {margin-bottom: 3em;}
+.form-inline{
+  position:absolute; right: 2em;
+}
+.topNote {
+  margin-bottom: 3em;
+}
 .flex-column {
 padding: 0.7em;
 }
@@ -10,13 +16,16 @@ textarea {
   border-radius: 7px;
   outline: none;
 }
-
 .init {
-
   width: 30em;
   height: 4em;
 }
-
+.note {
+  position: absolute;
+  top: 6em;
+  left: 35%;
+  filter: drop-shadow(0 0 2px #aaaaaa);
+}
 .close {
   border: none;
   background-color: white;
@@ -25,27 +34,10 @@ textarea {
   right:10px;
   font-size: 14px;
 }
-.note {
-  position: absolute;
-  top: 6em;
-  left: 35%;
-  filter: drop-shadow(0 0 2px #aaaaaa);
-}
-
 .collection{
   position: relative;
   top:6em;
 }
-
-.buttonCollection{
-  border: none;
-  background-color: white;
-  position:absolute;
-  bottom:10px;
-  right:10px;
-  font-size: 14px;
-}
-
 .formCollection{
   position: relative;
   margin-left: auto;
@@ -55,32 +47,49 @@ textarea {
   width: 15em;
   height: 10em;
 }
-
-.user {
-  display: none;
-  width: 20em;
-  height: 10em;
-  position: relative;
-  left: 70%;
+.buttonCollection{
+  border: none;
+  background-color: white;
+  position: absolute;
+  bottom:10px;
+  right:10px;
+  font-size: 14px;
 }
 
-.register {
+/* signin.php formatting */
+.signinForm {
   display: none;
+  width: 40%;
+  margin: 7em auto;
+}
+#PsigninForm{
+  font-size: 13px;
+  z-index: 3
+}
+
+/* signup.php formatting */
+.register {
   width: 30em;
   height: 20em;
-  position: relative;
-  left: 35%;
-  top: 5em;;
-  z-index: 2;
+  margin: 5em auto;
+}
+#userNameError{
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+#userNameAccepted{
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
 }
 
-body{position: relative;}
 
 .blur {
 		display:none;
-		backdrop-filter: blur(10px);
+		backdrop-filter: blur(5px);
 		background-color: rgba(255, 255, 255, 0.3);
-		height: 100vh;
+		height: 100%;
 		width: 100%;
 		position: absolute;
 		top: 0;

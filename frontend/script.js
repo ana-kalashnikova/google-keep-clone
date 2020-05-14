@@ -11,27 +11,14 @@ $('.note').focusout(function(){
   $('.init').css({ // shrink the top form
   'height':'-=3em'
   });
-// submit when click outside the form?????
-  // $('.close').submit(); //form class
-  // $('.init').val('');
   });
 
-
 $('.signin').click(function(e){
-  $('.user').toggle();
+  $('.signinForm').toggle();
+  $('.note').toggle();
   e.preventDefault();
+ });
 
-});
-
-$('.signup').click(function(e){
-  $('.register').toggle();
-  e.preventDefault();
-  $('.blur').css('display','flex');
-});
-$('.register').submit(function(i){
-  i.preventDefault();
-  $('.blur').hide();
-});
 
 $('.formCollection').focusin(function(){
   $('.txtareaCollection').css({
@@ -42,6 +29,18 @@ $('.formCollection').focusin(function(){
     'height':'15em',
     'z-index':'3'
   });
-
+  $('.buttonCollection').css({
+// move the button
+  'position':'fixed',
+  'z-index':'3',
+  'left':'57%',
+  'bottom':'48%'
+  });
+  // $('.blur').css('display','flex');
+  // $('.formCollection').submit(function(i){
+  // i.preventDefault();
+  // $('.blur').hide();
+  // });
 });
+
 });
