@@ -47,6 +47,7 @@
       redirect_user('test1.php');
     }
     else{
+      // right now this does not work. It doesn't check the DB properly. 
       echo "<p>Email and password do not match those on file. Try again.<p>";
     }
     mysqli_close($dbc);
