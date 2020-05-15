@@ -11,6 +11,7 @@
     <script src="script.js"></script>
     <link rel="icon" href="google-keep.png" type="image/ico">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">  </head>
+    
 <body>
   <?php session_start(); ?>
   <nav class="navbar navbar-expand-md navbar-light sticky-top bg-white">
@@ -30,22 +31,22 @@
 
 <?php
 require('keep_connect.php');
-
- ?>
+?>
 
 <main>
 <div class="container-fluid">
-   <div class="d-flex flex-row flex-wrap topNote">
+   <div class = "d-flex flex-row flex-wrap topNote">
    <?php
      if($_SERVER['REQUEST_METHOD'] == 'POST'){
        if (isset($_POST['postInitial'])){
         $newNote = $_POST['postInitial'];
 
         if (isset($_SESSION['user_id'])){
-          $userId=$_SESSION['user_id'];
+          $userId = $_SESSION['user_id'];
         }
-        $addNote="insert into notes (note,user_id) values ('$newNote',$userId)";
-        $run=mysqli_query($dbc,$addNote);
+        // signin.php is prolly not working cause it's not recognizing $userID
+        $addNote = "INSERT INTO notes (note, user_id) VALUES ('$newNote', '$userId')";
+        $run = mysqli_query($dbc,$addNote);
       }
     }
    ?>
