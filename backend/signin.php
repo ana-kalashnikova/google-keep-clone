@@ -22,11 +22,11 @@
     </form>
   </nav>
 
-  <!-- Not sure if you wanna include the note form below on the sign in page. I think it's fine if we take it out. I commented it out. Delete it if you don't think we need it.  -->
-  <!-- <form class="note" action="test1.php" method="post">
+  <!-- Not sure if you wanna include the note form below on the sign in page. I think it's fine if we take it out. Delete it if you don't think we need it.  -->
+  <form class="note" action="test1.php" method="post">
     <textarea name="postInitial" class="init" placeholder="Take a note..."></textarea>
     <input type="submit" value="add note" class="close">
-  </form> -->
+  </form>
 
   <?php
   //sign in existing user
