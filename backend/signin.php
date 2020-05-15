@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
     crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../frontend/styles/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="script.js"></script>
+    <script src="../frontend/script.js"></script>
     <link rel="icon" href="google-keep.png" type="image/ico">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
   </head>
@@ -21,6 +21,8 @@
       <button class="btn btn-outline-success my-2 my-sm-0">Sign In</button>
     </form>
   </nav>
+
+  <!-- Not sure if you wanna include the note form below on the sign in page. I think it's fine if we take it out. Delete it if you don't think we need it.  -->
   <form class="note" action="test1.php" method="post">
     <textarea name="postInitial" class="init" placeholder="Take a note..."></textarea>
     <input type="submit" value="add note" class="close">
@@ -28,23 +30,25 @@
 
   <?php
   //sign in existing user
-  if ($_SERVER['REQUEST_METHOD']=='POST'){
+  if($_SERVER['REQUEST_METHOD']=='POST'){
     require('keep_connect.php');
-    if (isset($_POST['email'])&&isset($_POST['pass'])){
-      $email=$_POST['email'];
-      $password=$_POST['pass'];
+    if(isset($_POST['email']) && isset($_POST['pass'])){
+      $email = $_POST['email'];
+      $password = $_POST['pass'];
     }
 
     require('funct.php');
     
-    list ($check, $data) = check_login($dbc, $email, $password);
-    if ($check){
+    list($check, $data) = check_login($dbc, $email, $password);
+    if($check){
       session_start();
-      $_SESSION['user_id']=$data['user_id'];
-      $_SESSION['user_name']=$data['user_name'];
+      $_SESSION['user_id'] = $data['user_id'];
+      $_SESSION['user_name'] = $data['user_name'];
       redirect_user('test1.php');
-    }else{
-      echo "Email and password do not match those on file.";
+    }
+    else{
+      // right now this does not work. It doesn't check the DB properly. 
+      echo "<p>Email and password do not match those on file. Try again.<p>";
     }
     mysqli_close($dbc);
   }
@@ -54,7 +58,7 @@
     <p><strong>Please sign in to your account</strong></p>
     <div class="form-group">
       <label for="Email">Email address</label>
-      <input type="email" name="email" class="form-control" placeholder="Enter email">
+      <input type="email" name="email" class="form-control" placeholder="Enter email address">
     </div>
     <div class="form-group">
       <label for="Password">Password</label>
