@@ -1,6 +1,13 @@
-*{font-family: 'Roboto', sans-serif;}
-.form-inline{position:absolute; right: 2em;}
-.topNote {margin-bottom: 3em;}
+*{
+  font-family: 'Roboto', sans-serif;
+}
+/* signin button */
+.form-inline{
+  position:absolute; right: 2em;
+}
+.topNote {
+  margin-bottom: 3em;
+}
 .flex-column {
 padding: 0.7em;
 }
@@ -9,14 +16,16 @@ textarea {
   border-radius: 7px;
   outline: none;
 }
-
 .init {
-  position: relative;
-  display:block;
   width: 30em;
   height: 4em;
 }
-
+.note {
+  position: absolute;
+  top: 6em;
+  left: 35%;
+  filter: drop-shadow(0 0 2px #aaaaaa);
+}
 .close {
   border: none;
   background-color: white;
@@ -25,21 +34,10 @@ textarea {
   right:10px;
   font-size: 14px;
 }
-.note {
+.collection{
   position: relative;
-  top: 0.5em;
-  margin-left: auto;
-  margin-right: auto;
-  filter: drop-shadow(0 0 2px #aaaaaa);
+  top:6em;
 }
-
-/* .buttonCollection{
-  border: none;
-  background-color: white;
-  position:absolute;
-  bottom:10px;
-  right:10px;
-} */
 .formCollection{
   position: relative;
   margin-left: auto;
@@ -49,22 +47,53 @@ textarea {
   width: 15em;
   height: 10em;
 }
-
-.user {
-  display: none;
-  width: 20em;
-  height: 10em;
+.buttonCollection{
+  border: none;
+  background-color: white;
   position: absolute;
-  top: 15%;
-  right: 10%;
+  bottom:10px;
+  right:10px;
+  font-size: 14px;
 }
 
-.register {
+/* signin.php formatting */
+.signinForm {
   display: none;
+  width: 40%;
+  margin: 7em auto;
+}
+#PsigninForm{
+  font-size: 13px;
+  z-index: 3
+}
+
+/* signup.php formatting */
+.register {
   width: 30em;
   height: 20em;
-  position: absolute;
-  top: 20%;
-  left: 30%;
-  z-index: 2;
+  margin: 5em auto;
 }
+#userNameError{
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+#userNameAccepted{
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+.blur {
+		display:none;
+		backdrop-filter: blur(5px);
+		background-color: rgba(255, 255, 255, 0.3);
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		align-items: center;
+		justify-content: center;
+    z-index: 3;
+	}

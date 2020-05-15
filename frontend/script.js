@@ -10,21 +10,15 @@ $(document).ready(function(){
 $('.note').focusout(function(){
   $('.init').css({ // shrink the top form
   'height':'-=3em'
-});
-//How to keep the form after submitting???????????
-
+  });
   });
 
-
 $('.signin').click(function(e){
-  $('.user').toggle();
+  $('.signinForm').toggle();
+  $('.note').toggle();
   e.preventDefault();
-});
+ });
 
-$('.signup').click(function(e){
-  $('.register').toggle();
-  e.preventDefault();
-});
 
 $('.formCollection').focusin(function(){
   $('.txtareaCollection').css({
@@ -35,13 +29,18 @@ $('.formCollection').focusin(function(){
     'height':'15em',
     'z-index':'3'
   });
-
-  // $('.buttonCollection').css({
-  //   'position':'fixed',
-  //   'bottom':'22em',
-  //   'right':'39em',
-  //   'z-index':'101'
+  $('.buttonCollection').css({
+// move the button
+  'position':'fixed',
+  'z-index':'3',
+  'left':'57%',
+  'bottom':'48%'
+  });
+  // $('.blur').css('display','flex');
+  // $('.formCollection').submit(function(i){
+  // i.preventDefault();
+  // $('.blur').hide();
   // });
-
 });
+
 });
