@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST'){
       $email=$_POST['newEmail'];
       $password=$_POST['newPass'];
 
-      $addNewUserToUsers="insert into users (user_name, email, password) values ('$newUser', '$email', sha1('$password'))";
+      $addNewUserToUsers="insert into users (user_name, email, password) values ('$newUser', '$email', '$password')";
       $run=mysqli_query($dbc,$addNewUserToUsers);
       echo "<p id='userNameAccepted'>Thank you! <br /> You've registered!</p>";
       header("Refresh:3, URL=signin.php");

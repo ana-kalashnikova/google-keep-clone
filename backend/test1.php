@@ -11,18 +11,17 @@
     <script src="../frontend/script.js"></script>
     <link rel="icon" href="google-keep.png" type="image/ico">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">  </head>
-    
+
 <body>
   <?php session_start(); ?>
   <nav class="navbar navbar-expand-md navbar-light sticky-top bg-white">
     <a class="navbar-brand"><img src="google-keep.png" alt="logo" width=60 height=60>Keep</a>
-    <?php
-    if (isset($_SESSION['user_name'])){
-      echo "<li class='nav-item'>".$_SESSION['user_name']."</li>";
-    }
-
-    ?>
     <form class="form-inline">
+      <?php
+      if (isset($_SESSION['user_name'])){
+        echo "<p class='nav-item' style='font-size:20px; position:absolute; top:4px; right:7em;'>".$_SESSION['user_name']."</p>";
+      }
+      ?>
       <input type="submit" class="btn btn-outline-success my-2 my-sm-0 signout" value="Sign Out">
     </form>
   </nav>
