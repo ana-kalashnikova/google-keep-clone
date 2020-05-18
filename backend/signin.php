@@ -13,18 +13,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
   </head>
 <body>
-<!-- error_reporting(E_ALL ^ E_NOTICE); -->
-
   <nav class="navbar navbar-expand-md navbar-light sticky-top bg-white">
     <a class="navbar-brand"><img src="google-keep.png" alt="logo" width=60 height=60>Keep</a>
     <form class="form-inline signin">
       <button class="btn btn-outline-success my-2 my-sm-0">Sign In</button>
     </form>
   </nav>
-
-  <!-- Not sure if you wanna include the note form below on the sign in page. I think it's fine if we take it out. Delete it if you don't think we need it.  -->
   <form class="note" action="test1.php" method="post">
-    <textarea name="postInitial" class="init" placeholder="Take a note..."></textarea>
+    <textarea name="postInitial" class="init disable" placeholder="Take a note..."></textarea>
     <input type="submit" value="add note" class="close">
   </form>
 

@@ -66,6 +66,9 @@ textarea {
   font-size: 13px;
   z-index: 3
 }
+textarea .disable {
+    pointer-events: none;
+ }
 
 /* signup.php formatting */
 .register {
